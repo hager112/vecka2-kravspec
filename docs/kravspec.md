@@ -59,3 +59,18 @@ Som teammedlem vill jag se vilka uppgifter som är försenade, så att jag kan a
 ### Undantagsflöden
 - **E1. API:t svarar inte:** ❓ vad ska användaren se?
 - **E2. Uppgiften är borttagen av någon annan:** ❓ vad ska hända?
+
+
+
+## 6. Icke-funktionella krav
+| Krav | Siffra | Hur vi mäter |
+|---|---|---|
+| Svarstid | Listan laddas på under 200 ms, även när alla 8 öppnar den samtidigt | Lasttest med 8 samtidiga användare |
+| Felfrekvens | 0 misslyckade anrop | Räkna fel i loggen |
+| Tidszon | Svensk tid avgör om en uppgift är försenad | Test med AK-1.2 |
+
+## 7. Utanför scope
+Förslag som behöver stämmas av med Sara:
+- Notiser via mejl eller sms (vi vet inte än vem som ska få veta, F8)
+- Nya sätt att skapa eller redigera uppgifter
+- Rapporter och statistiksidor utöver mätvärdet "klara i tid"
