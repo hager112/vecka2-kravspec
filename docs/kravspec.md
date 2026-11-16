@@ -24,3 +24,15 @@ Buggrapport: "Klockan nio på morgonen står det att 'Skicka offert' är en dag 
 | F7 | Vad ska hända med uppgifter utan datum? | ❓ |
 | F8 | Vem ska få veta när något blir försenat? | ❓ |
 | F9 | Om en månad, vad har ändrats om vi lyckats? | 85 % klara i tid inom 4 veckor |
+
+
+
+## 4. User stories med acceptanskriterier
+
+### US-1: Se försenade uppgifter
+Som teammedlem vill jag se vilka uppgifter som är försenade, så att jag kan agera innan kunden ringer.
+
+- **AK-1.1** Givet en uppgift med förfallodatum igår, som inte är klar, när jag öppnar listan, så visas den som försenad.
+- **AK-1.2** Givet en uppgift med förfallodatum idag, när klockan är 23:59 svensk tid, så är den inte försenad.
+- **AK-1.3** Givet en uppgift som är klar, så är den aldrig försenad, oavsett datum.
+- **AK-1.4** Givet att inga uppgifter är försenade, när jag öppnar listan, så visas en tom lista.
