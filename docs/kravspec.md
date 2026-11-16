@@ -36,3 +36,26 @@ Som teammedlem vill jag se vilka uppgifter som är försenade, så att jag kan a
 - **AK-1.2** Givet en uppgift med förfallodatum idag, när klockan är 23:59 svensk tid, så är den inte försenad.
 - **AK-1.3** Givet en uppgift som är klar, så är den aldrig försenad, oavsett datum.
 - **AK-1.4** Givet att inga uppgifter är försenade, när jag öppnar listan, så visas en tom lista.
+
+
+
+## 5. Use case: Se och åtgärda försenade uppgifter
+**Aktör:** Teammedlem
+**Mål:** Hinna göra försenade uppgifter innan kunden ringer
+
+### Huvudflöde
+1. Teammedlemmen öppnar appen.
+2. Systemet visar de försenade uppgifterna överst.
+3. Teammedlemmen gör uppgiften.
+4. Teammedlemmen markerar uppgiften som klar.
+5. Uppgiften försvinner från listan över försenade (AK-1.3).
+
+### Alternativa flöden
+- **A1. Inget är försenat:** systemet visar en tom lista (AK-1.4).
+- **A2. Uppgiften ska vara klar idag:** den visas inte som försenad förrän dagen är slut (AK-1.2). *Det här är Kims bugg.*
+- **A3. Uppgiften blir klar för sent:** den räknas som klar, men inte som "klar i tid" i mätvärdet.
+- **A4. Uppgiften saknar datum:** ❓ (väntar på Saras svar, F7)
+
+### Undantagsflöden
+- **E1. API:t svarar inte:** ❓ vad ska användaren se?
+- **E2. Uppgiften är borttagen av någon annan:** ❓ vad ska hända?
